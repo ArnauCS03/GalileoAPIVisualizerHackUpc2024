@@ -17,10 +17,3 @@ Graphical interface and plots made with:
 <p float="center">
  <img src="https://github.com/ArnauCS03/GalileoESAHackUpc2024/assets/95536223/29050e04-2d11-44af-a7ae-9aad010d2819" />
 </p>
-
-
-
-
-
-
-
