@@ -5,3 +5,4 @@ Challenge of the European Space Agency of the HackUPC 2024. Where we developed a
 - Arnau Claramunt
 - Pau Rambla
 - Gleb Semenov
+---
