@@ -1,0 +1,566 @@
+{
+    "datasource": {
+      "type": "influxdb",
+      "uid": "edkbyaq3zqygwc"
+    },
+    "description": "",
+    "fieldConfig": {
+      "defaults": {
+        "custom": {
+          "drawStyle": "line",
+          "lineInterpolation": "linear",
+          "barAlignment": 0,
+          "lineWidth": 1,
+          "fillOpacity": 0,
+          "gradientMode": "none",
+          "spanNulls": false,
+          "insertNulls": false,
+          "showPoints": "auto",
+          "pointSize": 5,
+          "stacking": {
+            "mode": "none",
+            "group": "A"
+          },
+          "axisPlacement": "auto",
+          "axisLabel": "",
+          "axisColorMode": "text",
+          "axisBorderShow": false,
+          "scaleDistribution": {
+            "type": "linear"
+          },
+          "axisCenteredZero": false,
+          "hideFrom": {
+            "tooltip": false,
+            "viz": false,
+            "legend": false
+          },
+          "thresholdsStyle": {
+            "mode": "off"
+          }
+        },
+        "color": {
+          "mode": "palette-classic"
+        },
+        "mappings": [],
+        "thresholds": {
+          "mode": "absolute",
+          "steps": [
+            {
+              "color": "green",
+              "value": null
+            },
+            {
+              "color": "red",
+              "value": 80
+            }
+          ]
+        },
+        "unit": "dBHz"
+      },
+      "overrides": []
+    },
+    "gridPos": {
+      "h": 8,
+      "w": 24,
+      "x": 0,
+      "y": 16
+    },
+    "id": 3,
+    "options": {
+      "tooltip": {
+        "mode": "single",
+        "sort": "none"
+      },
+      "legend": {
+        "showLegend": true,
+        "displayMode": "list",
+        "placement": "bottom",
+        "calcs": []
+      }
+    },
+    "targets": [
+      {
+        "alias": "SV1",
+        "datasource": {
+          "type": "influxdb",
+          "uid": "edkbyaq3zqygwc"
+        },
+        "query": "SELECT last(\"Cn0DbHz\") FROM \"Raw\" WHERE  (\"ConstellationType\"::field = 6) AND (\"SvidTag\"::tag = '1') AND $timeFilter GROUP BY time($__interval) fill(0)",
+        "rawQuery": true,
+        "refId": "A",
+        "resultFormat": "time_series"
+      },
+      {
+        "alias": "SV2",
+        "datasource": {
+          "type": "influxdb",
+          "uid": "edkbyaq3zqygwc"
+        },
+        "hide": false,
+        "query": "SELECT last(\"Cn0DbHz\") FROM \"Raw\" WHERE  (\"ConstellationType\"::field = 6) AND (\"SvidTag\"::tag = '2') AND $timeFilter GROUP BY time($__interval) fill(0)",
+        "rawQuery": true,
+        "refId": "B",
+        "resultFormat": "time_series"
+      },
+      {
+        "alias": "SV3",
+        "datasource": {
+          "type": "influxdb",
+          "uid": "edkbyaq3zqygwc"
+        },
+        "hide": false,
+        "query": "SELECT last(\"Cn0DbHz\") FROM \"Raw\" WHERE  (\"ConstellationType\"::field = 6) AND (\"SvidTag\"::tag = '3') AND $timeFilter GROUP BY time($__interval) fill(0)",
+        "rawQuery": true,
+        "refId": "C",
+        "resultFormat": "time_series"
+      },
+      {
+        "alias": "SV4",
+        "datasource": {
+          "type": "influxdb",
+          "uid": "edkbyaq3zqygwc"
+        },
+        "hide": false,
+        "query": "SELECT last(\"Cn0DbHz\") FROM \"Raw\" WHERE  (\"ConstellationType\"::field = 6) AND (\"SvidTag\"::tag = '4') AND $timeFilter GROUP BY time($__interval) fill(0)",
+        "rawQuery": true,
+        "refId": "D",
+        "resultFormat": "time_series"
+      },
+      {
+        "alias": "SV5",
+        "datasource": {
+          "type": "influxdb",
+          "uid": "edkbyaq3zqygwc"
+        },
+        "hide": false,
+        "query": "SELECT last(\"Cn0DbHz\") FROM \"Raw\" WHERE  (\"ConstellationType\"::field = 6) AND (\"SvidTag\"::tag = '5') AND $timeFilter GROUP BY time($__interval) fill(0)",
+        "rawQuery": true,
+        "refId": "E",
+        "resultFormat": "time_series"
+      },
+      {
+        "alias": "SV6",
+        "datasource": {
+          "type": "influxdb",
+          "uid": "edkbyaq3zqygwc"
+        },
+        "hide": false,
+        "query": "SELECT last(\"Cn0DbHz\") FROM \"Raw\" WHERE  (\"ConstellationType\"::field = 6) AND (\"SvidTag\"::tag = '6') AND $timeFilter GROUP BY time($__interval) fill(0)",
+        "rawQuery": true,
+        "refId": "F",
+        "resultFormat": "time_series"
+      },
+      {
+        "alias": "SV7",
+        "datasource": {
+          "type": "influxdb",
+          "uid": "edkbyaq3zqygwc"
+        },
+        "hide": false,
+        "query": "SELECT last(\"Cn0DbHz\") FROM \"Raw\" WHERE  (\"ConstellationType\"::field = 6) AND (\"SvidTag\"::tag = '7') AND $timeFilter GROUP BY time($__interval) fill(0)",
+        "rawQuery": true,
+        "refId": "G",
+        "resultFormat": "time_series"
+      },
+      {
+        "alias": "SV8",
+        "datasource": {
+          "type": "influxdb",
+          "uid": "edkbyaq3zqygwc"
+        },
+        "hide": false,
+        "query": "SELECT last(\"Cn0DbHz\") FROM \"Raw\" WHERE  (\"ConstellationType\"::field = 6) AND (\"SvidTag\"::tag = '8') AND $timeFilter GROUP BY time($__interval) fill(0)",
+        "rawQuery": true,
+        "refId": "H",
+        "resultFormat": "time_series"
+      },
+      {
+        "alias": "SV9",
+        "datasource": {
+          "type": "influxdb",
+          "uid": "edkbyaq3zqygwc"
+        },
+        "hide": false,
+        "query": "SELECT last(\"Cn0DbHz\") FROM \"Raw\" WHERE  (\"ConstellationType\"::field = 6) AND (\"SvidTag\"::tag = '9') AND $timeFilter GROUP BY time($__interval) fill(0)",
+        "rawQuery": true,
+        "refId": "I",
+        "resultFormat": "time_series"
+      },
+      {
+        "alias": "SV10",
+        "datasource": {
+          "type": "influxdb",
+          "uid": "edkbyaq3zqygwc"
+        },
+        "hide": false,
+        "query": "SELECT last(\"Cn0DbHz\") FROM \"Raw\" WHERE  (\"ConstellationType\"::field = 6) AND (\"SvidTag\"::tag = '10') AND $timeFilter GROUP BY time($__interval) fill(0)",
+        "rawQuery": true,
+        "refId": "J",
+        "resultFormat": "time_series"
+      },
+      {
+        "alias": "SV11",
+        "datasource": {
+          "type": "influxdb",
+          "uid": "edkbyaq3zqygwc"
+        },
+        "hide": false,
+        "query": "SELECT last(\"Cn0DbHz\") FROM \"Raw\" WHERE (\"ConstellationType\"::field = 6) AND  (\"SvidTag\"::tag = '11') AND $timeFilter GROUP BY time($__interval) fill(0)",
+        "rawQuery": true,
+        "refId": "K",
+        "resultFormat": "time_series"
+      },
+      {
+        "alias": "SV12",
+        "datasource": {
+          "type": "influxdb",
+          "uid": "edkbyaq3zqygwc"
+        },
+        "hide": false,
+        "query": "SELECT last(\"Cn0DbHz\") FROM \"Raw\" WHERE (\"ConstellationType\"::field = 6) AND (\"SvidTag\"::tag = '12') AND $timeFilter GROUP BY time($__interval) fill(0)",
+        "rawQuery": true,
+        "refId": "L",
+        "resultFormat": "time_series"
+      },
+      {
+        "alias": "SV13",
+        "datasource": {
+          "type": "influxdb",
+          "uid": "edkbyaq3zqygwc"
+        },
+        "hide": false,
+        "query": "SELECT last(\"Cn0DbHz\") FROM \"Raw\" WHERE (\"ConstellationType\"::field = 6) AND (\"SvidTag\"::tag = '13') AND $timeFilter GROUP BY time($__interval) fill(0)",
+        "rawQuery": true,
+        "refId": "M",
+        "resultFormat": "time_series"
+      },
+      {
+        "alias": "SV14",
+        "datasource": {
+          "type": "influxdb",
+          "uid": "edkbyaq3zqygwc"
+        },
+        "hide": false,
+        "query": "SELECT last(\"Cn0DbHz\") FROM \"Raw\" WHERE (\"ConstellationType\"::field = 6) AND  (\"SvidTag\"::tag = '14') AND $timeFilter GROUP BY time($__interval) fill(0)",
+        "rawQuery": true,
+        "refId": "N",
+        "resultFormat": "time_series"
+      },
+      {
+        "alias": "SV15",
+        "datasource": {
+          "type": "influxdb",
+          "uid": "edkbyaq3zqygwc"
+        },
+        "hide": false,
+        "query": "SELECT last(\"Cn0DbHz\") FROM \"Raw\" WHERE (\"ConstellationType\"::field = 6) AND (\"SvidTag\"::tag = '15') AND $timeFilter GROUP BY time($__interval) fill(0)",
+        "rawQuery": true,
+        "refId": "O",
+        "resultFormat": "time_series"
+      },
+      {
+        "alias": "SV16",
+        "datasource": {
+          "type": "influxdb",
+          "uid": "edkbyaq3zqygwc"
+        },
+        "hide": false,
+        "query": "SELECT last(\"Cn0DbHz\") FROM \"Raw\" WHERE (\"ConstellationType\"::field = 6) AND (\"SvidTag\"::tag = '16') AND $timeFilter GROUP BY time($__interval) fill(0)",
+        "rawQuery": true,
+        "refId": "P",
+        "resultFormat": "time_series"
+      },
+      {
+        "alias": "SV17",
+        "datasource": {
+          "type": "influxdb",
+          "uid": "edkbyaq3zqygwc"
+        },
+        "hide": false,
+        "query": "SELECT last(\"Cn0DbHz\") FROM \"Raw\" WHERE (\"ConstellationType\"::field = 6) AND (\"SvidTag\"::tag = '17') AND $timeFilter GROUP BY time($__interval) fill(0)",
+        "rawQuery": true,
+        "refId": "Q",
+        "resultFormat": "time_series"
+      },
+      {
+        "alias": "SV18",
+        "datasource": {
+          "type": "influxdb",
+          "uid": "edkbyaq3zqygwc"
+        },
+        "hide": false,
+        "query": "SELECT last(\"Cn0DbHz\") FROM \"Raw\" WHERE (\"ConstellationType\"::field = 6) AND (\"SvidTag\"::tag = '18') AND $timeFilter GROUP BY time($__interval) fill(0)",
+        "rawQuery": true,
+        "refId": "R",
+        "resultFormat": "time_series"
+      },
+      {
+        "alias": "SV19",
+        "datasource": {
+          "type": "influxdb",
+          "uid": "edkbyaq3zqygwc"
+        },
+        "hide": false,
+        "query": "SELECT last(\"Cn0DbHz\") FROM \"Raw\" WHERE (\"ConstellationType\"::field = 6) AND (\"SvidTag\"::tag = '19') AND $timeFilter GROUP BY time($__interval) fill(0)",
+        "rawQuery": true,
+        "refId": "S",
+        "resultFormat": "time_series"
+      },
+      {
+        "alias": "SV20",
+        "datasource": {
+          "type": "influxdb",
+          "uid": "edkbyaq3zqygwc"
+        },
+        "hide": false,
+        "query": "SELECT last(\"Cn0DbHz\") FROM \"Raw\" WHERE (\"ConstellationType\"::field = 6) AND (\"SvidTag\"::tag = '20') AND $timeFilter GROUP BY time($__interval) fill(0)",
+        "rawQuery": true,
+        "refId": "T",
+        "resultFormat": "time_series"
+      },
+      {
+        "alias": "SV21",
+        "datasource": {
+          "type": "influxdb",
+          "uid": "edkbyaq3zqygwc"
+        },
+        "hide": false,
+        "query": "SELECT last(\"Cn0DbHz\") FROM \"Raw\" WHERE (\"ConstellationType\"::field = 6) AND (\"SvidTag\"::tag = '21') AND $timeFilter GROUP BY time($__interval) fill(0)",
+        "rawQuery": true,
+        "refId": "U",
+        "resultFormat": "time_series"
+      },
+      {
+        "alias": "SV22",
+        "datasource": {
+          "type": "influxdb",
+          "uid": "edkbyaq3zqygwc"
+        },
+        "hide": false,
+        "query": "SELECT last(\"Cn0DbHz\") FROM \"Raw\" WHERE (\"ConstellationType\"::field = 6) AND (\"SvidTag\"::tag = '22') AND $timeFilter GROUP BY time($__interval) fill(0)",
+        "rawQuery": true,
+        "refId": "V",
+        "resultFormat": "time_series"
+      },
+      {
+        "alias": "SV23",
+        "datasource": {
+          "type": "influxdb",
+          "uid": "edkbyaq3zqygwc"
+        },
+        "hide": false,
+        "query": "SELECT last(\"Cn0DbHz\") FROM \"Raw\" WHERE (\"ConstellationType\"::field = 6) AND (\"SvidTag\"::tag = '23') AND $timeFilter GROUP BY time($__interval) fill(0)",
+        "rawQuery": true,
+        "refId": "W",
+        "resultFormat": "time_series"
+      },
+      {
+        "alias": "SV24",
+        "datasource": {
+          "type": "influxdb",
+          "uid": "edkbyaq3zqygwc"
+        },
+        "hide": false,
+        "query": "SELECT last(\"Cn0DbHz\") FROM \"Raw\" WHERE (\"ConstellationType\"::field = 6) AND (\"SvidTag\"::tag = '24') AND $timeFilter GROUP BY time($__interval) fill(0)",
+        "rawQuery": true,
+        "refId": "X",
+        "resultFormat": "time_series"
+      },
+      {
+        "alias": "SV25",
+        "datasource": {
+          "type": "influxdb",
+          "uid": "edkbyaq3zqygwc"
+        },
+        "hide": false,
+        "query": "SELECT last(\"Cn0DbHz\") FROM \"Raw\" WHERE (\"ConstellationType\"::field = 6) AND (\"SvidTag\"::tag = '25') AND $timeFilter GROUP BY time($__interval) fill(0)",
+        "rawQuery": true,
+        "refId": "Y",
+        "resultFormat": "time_series"
+      },
+      {
+        "alias": "SV26",
+        "datasource": {
+          "type": "influxdb",
+          "uid": "edkbyaq3zqygwc"
+        },
+        "hide": false,
+        "query": "SELECT last(\"Cn0DbHz\") FROM \"Raw\" WHERE (\"ConstellationType\"::field = 6) AND (\"SvidTag\"::tag = '26') AND $timeFilter GROUP BY time($__interval) fill(0)",
+        "rawQuery": true,
+        "refId": "Z",
+        "resultFormat": "time_series"
+      },
+      {
+        "alias": "SV27",
+        "datasource": {
+          "type": "influxdb",
+          "uid": "edkbyaq3zqygwc"
+        },
+        "hide": false,
+        "query": "SELECT last(\"Cn0DbHz\") FROM \"Raw\" WHERE (\"ConstellationType\"::field = 6)  AND (\"SvidTag\"::tag = '27') AND $timeFilter GROUP BY time($__interval) fill(0)",
+        "rawQuery": true,
+        "refId": "AA",
+        "resultFormat": "time_series"
+      },
+      {
+        "alias": "SV28",
+        "datasource": {
+          "type": "influxdb",
+          "uid": "edkbyaq3zqygwc"
+        },
+        "hide": false,
+        "query": "SELECT last(\"Cn0DbHz\") FROM \"Raw\" WHERE (\"ConstellationType\"::field = 6) AND (\"SvidTag\"::tag = '28') AND $timeFilter GROUP BY time($__interval) fill(0)",
+        "rawQuery": true,
+        "refId": "AB",
+        "resultFormat": "time_series"
+      },
+      {
+        "alias": "SV29",
+        "datasource": {
+          "type": "influxdb",
+          "uid": "edkbyaq3zqygwc"
+        },
+        "hide": false,
+        "query": "SELECT last(\"Cn0DbHz\") FROM \"Raw\" WHERE (\"ConstellationType\"::field = 6) AND (\"SvidTag\"::tag = '29') AND $timeFilter GROUP BY time($__interval) fill(0)",
+        "rawQuery": true,
+        "refId": "AC",
+        "resultFormat": "time_series"
+      },
+      {
+        "alias": "SV30",
+        "datasource": {
+          "type": "influxdb",
+          "uid": "edkbyaq3zqygwc"
+        },
+        "hide": false,
+        "query": "SELECT last(\"Cn0DbHz\") FROM \"Raw\" WHERE (\"ConstellationType\"::field = 6) AND (\"SvidTag\"::tag = '30') AND $timeFilter GROUP BY time($__interval) fill(0)",
+        "rawQuery": true,
+        "refId": "AD",
+        "resultFormat": "time_series"
+      },
+      {
+        "alias": "SV31",
+        "datasource": {
+          "type": "influxdb",
+          "uid": "edkbyaq3zqygwc"
+        },
+        "hide": false,
+        "query": "SELECT last(\"Cn0DbHz\") FROM \"Raw\" WHERE (\"ConstellationType\"::field = 6) AND (\"SvidTag\"::tag = '31') AND $timeFilter GROUP BY time($__interval) fill(0)",
+        "rawQuery": true,
+        "refId": "AE",
+        "resultFormat": "time_series"
+      },
+      {
+        "alias": "SV32",
+        "datasource": {
+          "type": "influxdb",
+          "uid": "edkbyaq3zqygwc"
+        },
+        "hide": false,
+        "query": "SELECT last(\"Cn0DbHz\") FROM \"Raw\" WHERE (\"ConstellationType\"::field = 6) AND (\"SvidTag\"::tag = '32') AND $timeFilter GROUP BY time($__interval) fill(0)",
+        "rawQuery": true,
+        "refId": "AF",
+        "resultFormat": "time_series"
+      },
+      {
+        "alias": "SV33",
+        "datasource": {
+          "type": "influxdb",
+          "uid": "edkbyaq3zqygwc"
+        },
+        "hide": false,
+        "query": "SELECT last(\"Cn0DbHz\") FROM \"Raw\" WHERE (\"ConstellationType\"::field = 6) AND (\"SvidTag\"::tag = '33') AND $timeFilter GROUP BY time($__interval) fill(0)",
+        "rawQuery": true,
+        "refId": "AG",
+        "resultFormat": "time_series"
+      },
+      {
+        "alias": "SV34",
+        "datasource": {
+          "type": "influxdb",
+          "uid": "edkbyaq3zqygwc"
+        },
+        "hide": false,
+        "query": "SELECT last(\"Cn0DbHz\") FROM \"Raw\" WHERE (\"ConstellationType\"::field = 6) AND (\"SvidTag\"::tag = '34') AND $timeFilter GROUP BY time($__interval) fill(0)",
+        "rawQuery": true,
+        "refId": "AH",
+        "resultFormat": "time_series"
+      },
+      {
+        "alias": "SV36",
+        "datasource": {
+          "type": "influxdb",
+          "uid": "edkbyaq3zqygwc"
+        },
+        "hide": false,
+        "query": "SELECT last(\"Cn0DbHz\") FROM \"Raw\" WHERE (\"ConstellationType\"::field = 6)  AND (\"SvidTag\"::tag = '36') AND $timeFilter GROUP BY time($__interval) fill(0)",
+        "rawQuery": true,
+        "refId": "AI",
+        "resultFormat": "time_series"
+      },
+      {
+        "alias": "SV35",
+        "datasource": {
+          "type": "influxdb",
+          "uid": "edkbyaq3zqygwc"
+        },
+        "hide": false,
+        "query": "SELECT last(\"Cn0DbHz\") FROM \"Raw\" WHERE (\"ConstellationType\"::field = 6) AND (\"SvidTag\"::tag = '35') AND $timeFilter GROUP BY time($__interval) fill(0)",
+        "rawQuery": true,
+        "refId": "AJ",
+        "resultFormat": "time_series"
+      },
+      {
+        "alias": "All Galileo SVs",
+        "datasource": {
+          "type": "influxdb",
+          "uid": "edkbyaq3zqygwc"
+        },
+        "groupBy": [
+          {
+            "params": [
+              "$__interval"
+            ],
+            "type": "time"
+          },
+          {
+            "params": [
+              "null"
+            ],
+            "type": "fill"
+          }
+        ],
+        "hide": false,
+        "measurement": "Raw",
+        "orderByTime": "ASC",
+        "policy": "default",
+        "query": "SELECT mean(\"value\") FROM \"Raw\" WHERE (\"ConstellationType\"::field = 6) AND $timeFilter GROUP BY time($__interval) fill(null)",
+        "rawQuery": true,
+        "refId": "AK",
+        "resultFormat": "time_series",
+        "select": [
+          [
+            {
+              "params": [
+                "value"
+              ],
+              "type": "field"
+            },
+            {
+              "params": [],
+              "type": "mean"
+            }
+          ]
+        ],
+        "tags": [
+          {
+            "key": "ConstellationType::field",
+            "operator": "Is",
+            "value": "6"
+          }
+        ]
+      }
+    ],
+    "title": "Galileo C/N0",
+    "type": "timeseries"
+  }
