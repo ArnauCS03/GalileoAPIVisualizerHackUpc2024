@@ -1,6 +1,6 @@
 # Galileo ESA. HackUpc 2024
 
-Challenge of the European Space Agency of the HackUPC 2024. Where the main challenge was to developed an android app that gathers information about the satellite Galileo, and sends it to a database ([*influxBD*](https://www.influxdata.com/)) using our own API. And with that information, show it graphically using the plots of the web app [*Grafana*](https://grafana.com).    
+Challenge of the European Space Agency's HackUPC 2024. The main challenge was to develop an Android app that gathers information about the satellite Galileo, and sends it to a database ([*influxBD*](https://www.influxdata.com/)) using our own API. And with that information, show it graphically using the plots of the web app [*Grafana*](https://grafana.com).    
 ---
 
 <br>**Authors:**
@@ -9,7 +9,7 @@ Challenge of the European Space Agency of the HackUPC 2024. Where the main chall
 - Gleb Semenov
 ---
 <br>
-Also it was important after showing the results, help aswer some questions of the challenge:<br><br>
+Also, it was important after showing the results, help aswer some questions of the challenge:<br><br>
 - How many Galileo satellites are used on your phone?<br>
 - How is Galileo contributing to your position accuracy?<br> 
 - Are the signals being altered?<br>
@@ -26,17 +26,17 @@ Graphical interface and plots made with (Frontend):<br><br>
 </p>
 
 <br>
-To obtain the data (.logs) we used the GNSS Logger Google app in order to read the GPS/GNSS raw measurements signals of the satellites.<br><br>
+To obtain the data (.logs) we used the GNSS Logger Google app in order to read the GPS/GNSS raw measurement signals of the satellites.<br><br>
 
 ![androidGNSS](https://github.com/ArnauCS03/GalileoESAHackUpc2024/assets/95536223/62b1412b-e38f-4eab-b348-83cec5af0c4e)<br><br>
 
-GNSS: Global navigation satellite system is continuously transmiting navigation signals in two 
+GNSS (Global Navigation Satellite System) is continuously transmitting navigation signals in two 
 or more frequencies and some apps can get a record of them.<br><br>
 
 ---
 
 ### API
-The API was made in Python using [Flask](https://flask.palletsprojects.com/en/3.0.x/) and the data with format json.<br><br> 
+The API was made in Python using [Flask](https://flask.palletsprojects.com/en/3.0.x/) and the data in format json.<br><br> 
 ![flask](https://github.com/ArnauCS03/GalileoESAHackUpc2024/assets/95536223/ca8e5948-e79a-436e-be50-de7c55732b9c)<br>
 
 
@@ -49,5 +49,4 @@ This are some screenshots about how would look our partial implementation.<br><b
 
 
 
-We end up experimenting and setting up new tools rather than finishing the complete challenge.<br><br><br><br>
-<br><br>
+We end up experimenting and setting up new tools rather than finishing the complete challenge.<br><br>
