@@ -1,6 +1,6 @@
 # Galileo ESA. HackUpc 2024
 
-Challenge of the European Space Agency's HackUPC 2024. The main challenge was to develop an Android app that gathers information about the satellite Galileo, and sends it to a database ([*influxBD*](https://www.influxdata.com/)) using our own API. And with that information, show it graphically using the plots of the web app [*Grafana*](https://grafana.com).    
+Challenge of the European Space Agency's HackUPC 2024. The main challenge was to develop an Android app that gathers information about the satellite Galileo, and sends it to a database ([*influxDB*](https://www.influxdata.com/)) using our own API. And with that information, show it graphically using the plots of the web app [*Grafana*](https://grafana.com).    
 ---
 
 <br>**Authors:**
